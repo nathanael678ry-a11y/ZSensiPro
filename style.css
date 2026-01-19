@@ -1,1 +1,112 @@
-body{background:#0B0B0E;color:#D4AF37;font-family:Arial}
+* {
+  box-sizing: border-box;
+  font-family: 'Orbitron', sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #0B0B0E;
+  color: #E5E7EB;
+}
+
+.app {
+  max-width: 420px;
+  margin: auto;
+  padding: 15px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.glitch {
+  font-size: 34px;
+  color: #D4AF37;
+}
+
+.subtitle {
+  color: #9CA3AF;
+  font-size: 12px;
+}
+
+.tabs {
+  display: flex;
+  gap: 5px;
+}
+
+.tabs button {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  background: #111827;
+  color: #9CA3AF;
+  border-radius: 8px;
+}
+
+.tabs .active {
+  background: linear-gradient(135deg,#D4AF37,#9CA3AF);
+  color: #000;
+}
+
+.card {
+  background: #111827;
+  padding: 15px;
+  border-radius: 12px;
+  margin-top: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.4);
+}
+
+.switches {
+  display: flex;
+  gap: 5px;
+  margin-bottom: 10px;
+}
+
+.switches button {
+  flex: 1;
+  padding: 8px;
+  border-radius: 8px;
+  border: none;
+  background: #1F2933;
+  color: #9CA3AF;
+}
+
+.switches .active {
+  background: #D4AF37;
+  color: #000;
+}
+
+.btn {
+  width: 100%;
+  padding: 12px;
+  margin-top: 8px;
+  border-radius: 10px;
+  border: none;
+  font-size: 14px;
+}
+
+.gold {
+  background: linear-gradient(135deg,#D4AF37,#9CA3AF);
+  color: #000;
+}
+
+.hack {
+  background: linear-gradient(135deg,#7C2D12,#D4AF37);
+  color: #fff;
+}
+
+.tab {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+.result {
+  margin-top: 10px;
+  padding: 10px;
+  background: #020617;
+  border-radius: 8px;
+}
