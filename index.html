@@ -1,1 +1,80 @@
-<!DOCTYPE html><html><head><meta charset='utf-8'><title>ZSensi Era Nova</title><link rel='manifest' href='manifest.json'></head><body><h1>ZSensi Era Nova</h1><script>if('serviceWorker'in navigator){navigator.serviceWorker.register('service-worker.js')}</script></body></html>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>ZSensi • Era Nova</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#D4AF37">
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="app">
+
+  <header>
+    <h1 class="glitch" data-text="ZSENSI">ZSENSI</h1>
+    <span class="subtitle">ERA NOVA</span>
+  </header>
+
+  <nav class="tabs">
+    <button class="active" onclick="openTab('gerar',this)">IA</button>
+    <button onclick="openTab('aleatoria',this)">Aleatória</button>
+    <button onclick="openTab('famosos',this)">Famosos</button>
+    <button onclick="openTab('favoritos',this)">Favoritos</button>
+  </nav>
+
+  <!-- GERAR -->
+  <section id="gerar" class="tab show">
+    <div class="card">
+      <p class="label">Estilo de Sensibilidade</p>
+      <div class="switches">
+        <button onclick="setStyle('controle')" class="active">Controle</button>
+        <button onclick="setStyle('balanceada')">Balanceada</button>
+        <button onclick="setStyle('rapida')">Rápida</button>
+        <button onclick="setStyle('capa')">Mais Capa</button>
+      </div>
+
+      <button class="btn gold" onclick="generate(false)">⚡ GERAR SENSI</button>
+      <button class="btn hack" onclick="generate(true)">☠️ ESTILO HACK</button>
+
+      <div id="result"></div>
+    </div>
+  </section>
+
+  <!-- ALEATÓRIA -->
+  <section id="aleatoria" class="tab">
+    <div class="card">
+      <button class="btn gold" onclick="randomSensi()">🎲 GERAR ALEATÓRIA</button>
+      <div id="randomResult"></div>
+    </div>
+  </section>
+
+  <!-- FAMOSOS -->
+  <section id="famosos" class="tab">
+    <div class="card">
+      <input id="famousName" placeholder="Digite o nome do famoso">
+      <button class="btn gold" onclick="famousSensi()">🔍 BUSCAR</button>
+    </div>
+  </section>
+
+  <!-- FAVORITOS -->
+  <section id="favoritos" class="tab">
+    <div class="card" id="favList"></div>
+  </section>
+
+</div>
+
+<script src="script.js"></script>
+<script>
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('service-worker.js');
+}
+</script>
+
+</body>
+</html>
